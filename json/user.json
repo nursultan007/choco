@@ -1,0 +1,39 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "surname",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "phone",
+      "type": "string"
+    },
+	{
+      "name": "status",
+      "type": "integer"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "status",
+      "references": "id",
+      "on": "status",
+      "onDelete": "cascade"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "status",
+      "type": "belongsTo",
+      "class": "App\\Status"
+    }
+  ]
+}
